@@ -1,0 +1,260 @@
+---
+title: 3.0 &mdash; Typography
+---
+
+<%# @styleguide = Kss::Parser.new('source/css') %>
+
+
+
+<h2>3.1 &mdash; Headings</h2>
+
+<% styleguide_block '3.1.1' do %>
+  <h1 class="$modifier_class">This is 1st level heading</h1>
+<% end %>
+
+<% styleguide_block '3.1.2' do %>
+  <h2 class="$modifier_class">This is 2nd level heading</h2>
+<% end %>
+
+<% styleguide_block '3.1.3' do %>
+  <h3 class="$modifier_class">This is 3rd level heading</h3>
+<% end %>
+
+<% styleguide_block '3.1.4' do %>
+  <h4 class="$modifier_class">This is 4th level heading</h4>
+<% end %>
+
+<% styleguide_block '3.1.5' do %>
+  <h5 class="$modifier_class">This is 5th level heading</h5>
+<% end %>
+
+<% styleguide_block '3.1.6' do %>
+  <h6 class="$modifier_class">This is 6th level heading</h6>
+<% end %>
+
+
+
+<h2>3.2 &mdash; Lists</h2>
+
+<% styleguide_block '3.2.1' do %>
+  <p>This is a paragraph before an <strong>unordered</strong> list (<code>ul</code>). Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+  <ul class="$modifier_class">
+    <li>One.</li>
+    <li>Two.</li>
+    <li>Three. Well, this list item should probably be longer. Note that if items are short, lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</li>
+    <li>Four. This is the last item in this list. Let us terminate the list now without making any more fuss about it.</li>
+  </ul>
+<% end %>
+
+<% styleguide_block '3.2.2' do %>
+  <p>This is a paragraph before a <strong>ordered</strong> list (<code>ol</code>). Note that the spacing between a paragraph and a list before or after that is hard to tune in a user style sheet. You can't guess which paragraphs are logically related to a list, e.g. as a "list header".</p>
+
+  <ol class="$modifier_class">
+    <li>One.</li>
+    <li>Two.</li>
+    <li>Three. Well, this list item should probably be longer. Note that if items are short, lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</li>
+    <li>Four. This is the last item in this list. Let us terminate the list now without making any more fuss about it.</li>
+  </ol>
+<% end %>
+
+<% styleguide_block '3.2.3' do %>
+  <p>This is a paragraph before a <strong>definition</strong> list (<code>dl</code>). In principle, such a list should consist of <em>terms</em> and associated definitions. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+
+  <dl class="$modifier_class">
+    <dt>Apple</dt>
+    <dd>is a fruit.</dd>
+    <dt>Banana</dt>
+    <dd>Is also a fruit.</dd>
+    <dt>Tomato</dt>
+    <dd>Is debatable. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</dd>
+  </dl>
+<% end %>
+
+
+
+<h2>3.3 &mdash; Grouping Content</h2>
+
+<% styleguide_block '3.3.1' do %>
+  <p class="$modifier_class"><%= lorem.paragraph %></p>
+  <p class="$modifier_class"><%= lorem.paragraph %></p>
+  <p class="$modifier_class"><%= lorem.paragraph %></p>
+<% end %>
+
+<% styleguide_block '3.3.2' do %>
+  <p><%= lorem.paragraph %></p>
+
+  <blockquote class="$modifier_class">
+    <p>This is a block quotation containing a <em>single</em> paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+  </blockquote>
+
+  <p><%= lorem.paragraph %></p>
+<% end %>
+
+<% styleguide_block '3.3.3' do %>
+<pre class="$modifier_class"><code>//Do a bit of code debugging     ||-- Check Array vals
+document.write ("&lt;ul&gt;");
+for (i=1;i&lt;array.length;i++)
+ {
+ str += "&lt;li&gt;Value of array " + i + " is: " +array[i] + "&lt;/li&gt;";
+ }
+document.write(str);
+document.write ("&lt;/ul&gt;");
+</code></pre>
+<pre class="$modifier_class">
+1
+ 2
+  3
+   4
+    5
+</pre>
+<% end %>
+
+<% styleguide_block '3.3.4' do %>
+  <address class="$modifier_class">
+    Brought to you by the Editorial and News Team:<br/>
+    <a href="mailto:news@example.org">Email the news team</a><br/>
+    Mail us at PO Box 123, Citysville<br/>
+    Tel +1 212 3131
+  </address>
+<% end %>
+
+
+
+<h2>3.4 &mdash; Text-level Markup</h2>
+
+<% styleguide_block '3.4.1' do %>
+  <abbr title="Cascading Style Sheets" class="$modifier_class">CSS</abbr>
+<% end %>
+
+<% styleguide_block '3.4.2' do %>
+  <acronym title="radio detecting and ranging" class="$modifier_class">radar</acronym>
+<% end %>
+
+<% styleguide_block '3.4.3' do %>
+ A palindrome is a word, like 'kayak,' that appears exactly the same when all the letters are reversed. <bdo dir="rtl" class="$modifier_class">Canoe</bdo>, it seems, is not a palindrome.
+<% end %>
+
+<% styleguide_block '3.4.4' do %>
+  <cite class="$modifier_class">Origin of Species</cite>
+<% end %>
+
+<% styleguide_block '3.4.5' do %>
+  <code class="$modifier_class">a[i] = b[i] + c[i);</code>
+<% end %>
+
+<% styleguide_block '3.4.6' do %>
+  Bernie enjoyed nothing more than a <del datetime="2007-11-05T23:31:05Z" class="$modifier_class">night out on the town at his favorite drag queen show</del> <ins datetime="2007-11-05T23:33:32Z">quiet night in with a warm cup of cocoa.</ins>
+<% end %>
+
+<% styleguide_block '3.4.7' do %>
+  An <dfn class="$modifier_class">octet</dfn> is an entity consisting of eight bits.
+<% end %>
+
+<% styleguide_block '3.4.8' do %>
+  This is <em class="$modifier_class">very</em> simple
+<% end %>
+
+<% styleguide_block '3.4.9' do %>
+  <p><%= lorem.paragraph %></p>
+  <hr class="$modifier_class">
+  <p><%= lorem.paragraph %></p>
+<% end %>
+
+<% styleguide_block '3.4.10' do %>
+  Bernie enjoyed nothing more than a <del datetime="2007-11-05T23:31:05Z">night out on the town at his favorite drag queen show</del> <ins datetime="2007-11-05T23:33:32Z" class="$modifier_class">quiet night in with a warm cup of cocoa.</ins>
+<% end %>
+
+<% styleguide_block '3.4.11' do %>
+  Type <kbd class="$modifier_class">yes</kbd> when prompted for an answer
+<% end %>
+
+<% styleguide_block '3.4.12' do %>
+  <p lang="en-US">Consider the following quote:</p>
+  <blockquote lang="en-GB">
+    <p>Look around and you will find, no-one's really
+    <mark class="$modifier_class">colour</mark> blind.</p>
+  </blockquote>
+  <p lang="en-US">As we can tell from the <em>spelling</em> of the word, the person writing this quote is clearly not American.</p>
+<% end %>
+
+<% styleguide_block '3.4.13' do %>
+  <p><q class="$modifier_class">Hello!</q></p>
+  <p>He said: <q class="$modifier_class">She said, <q class="$modifier_class">Hello!</q></q> (a quotation inside a quotation)</p>
+<% end %>
+
+<% styleguide_block '3.4.14' do %>
+  <p>Buy our Iced Tea and Lemonade!</p>
+  <p><s class="$modifier_class">Recommended retail price: $3.99 per bottle</s></p>
+  <p><strong>Now selling for just $2.99 a bottle!</strong></p>
+<% end %>
+
+<% styleguide_block '3.4.15' do %>
+  You may get the message <samp class="$modifier_class">Core dumped</samp> at times
+<% end %>
+
+<% styleguide_block '3.4.16' do %>
+  Mark tried to get out of buying a round of drinks by getting progressively quieter as he talked: "Right, I'm off to stretch mylegs and then get a bag of peanuts ... <small class="$modifier_class">back in a minute ... <small>everyone OK for a drink?</small></small></p>
+<% end %>
+
+<% styleguide_block '3.4.17' do %>
+  <strong class="$modifier_class">This is highlighted text</strong>
+<% end %>
+
+<% styleguide_block '3.4.18' do %>
+  In order to test how subscripts work inside running text, we need some dummy text around constructs like x<sub class="$modifier_class">1</sub> and H<sub class="$modifier_class">2</sub>O (where subscripts occur). So here is some fill so that you will (hopefully) see whether and how badly the subscripts mess up vertical spacing between lines. <%= lorem.paragraph %>
+<% end %>
+
+<% styleguide_block '3.4.19' do %>
+  In order to test how superscripts work inside running text, we need some dummy text around constructs like M<sup class="$modifier_class">lle</sup>, 1<sup class="$modifier_class">st</sup> (where superscripts occur). So here is some fill so that you will (hopefully) see whether and how badly superscripts mess up vertical spacing between lines. Now some mathematical notations: e<sup class="$modifier_class">x</sup>, sin<sup class="$modifier_class">2</sup> <i>x</i> <%= lorem.paragraph %>
+<% end %>
+
+<% styleguide_block '3.4.20' do %>
+  <dl>
+    <dt>Valid month string</dt>
+    <dd><time class="$modifier_class">2011-11</time></dd>
+    <dt>Valid date string</dt>
+    <dd><time class="$modifier_class">2011-11-12</time></dd>
+    <dt>Valid yearless date string</dt>
+    <dd><time class="$modifier_class">11-12</time></dd>
+    <dt>Valid time string</dt>
+    <dd><time class="$modifier_class">14:54</time></dd>
+    <dt>Valid local date and time string</dt>
+    <dd><time class="$modifier_class">2011-11-12T14:54</time></dd>
+    <dt>Valid timezone offset string</dt>
+    <dd><time class="$modifier_class">-0500</time></dd>
+    <dt>Valid global date and time string</dt>
+    <dd><time class="$modifier_class">2011-11-12T06:54-0500</time></dd>
+    <dt>Valid week string</dt>
+    <dd><time class="$modifier_class">2011-W46</time></dd>
+    <dt>Valid year string</dt>
+    <dd><time class="$modifier_class">2011</time></dd>
+    <dt>Valid duration string</dt>
+    <dd><time class="$modifier_class">4h 18m 3s</time></dd>
+  </dl>
+<% end %>
+
+<% styleguide_block '3.4.21' do %>
+  The command <code>cat</code> <var class="$modifier_class">filename</var> displays the file specified by the <var class="$modifier_class">filename</var>.
+<% end %>
+
+
+
+<h2>3.5 &mdash; Non-semantic Elements</h2>
+
+<% styleguide_block '3.5.1' do %>
+  <b class="$modifier_class">Text in bold font</b>
+<% end %>
+
+<% styleguide_block '3.5.2' do %>
+  It's <big class="$modifier_class">bigger, <big class="$modifier_class">better, and now with <big class="$modifier_class">20% more beetroot goodness!</big></big></big>
+<% end %>
+
+<% styleguide_block '3.5.3' do %>
+  <i class="$modifier_class">Text in italic font</i>
+<% end %>
+
+<% styleguide_block '3.5.4' do %>
+  <tt class="$modifier_class">Text in monospace font</tt>
+<% end %>
+

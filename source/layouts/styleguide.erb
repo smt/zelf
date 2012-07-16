@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title><%= data.page.title || "Elf: Empathy Lab Framework" %></title>
+
+    <!-- Included CSS Files -->
+    <%= stylesheet_link_tag "elf", "app", "styleguide", "coderay" %>
+    <%= javascript_include_tag "elf/modernizr.elf" %>
+
+    <!-- IE Fix for HTML5 Tags -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body class="<%= page_classes %>">
+  <header class="styleguide-header">
+    Styleguide
+  </header>
+    <div id="styleguide">
+        <%= partial 'styleguide/nav' %>
+
+        <h1 class="title"><%= data.page.title %></h1>
+
+        <%= yield %>
+    </div>
+
+    <!-- Included JS Files -->
+    <%= javascript_include_tag "jquery.min",
+        "elf/jquery.reveal",
+        "elf/jquery.orbit-1.4.0",
+        "elf/jquery.customforms",
+        "elf/jquery.placeholder.min",
+        "elf/jquery.tooltips",
+        "elf/kss",
+        "app" %>
+</body>
+</html>
+
